@@ -14,7 +14,7 @@ class MPfinder:
         self.error_file = error_file
         self.proxies = {}
         self.session = requests.Session() 
-        proxy = 'http://jendatag:duVnm81Cjy3W@unblock.oxylabs.io:60000'
+        proxy = os.environ.get("proxy",None)                                                           ## Use any proxy as per your convenience 
         self.proxies["http"] = proxy
         self.proxies["https"] = proxy
         self.session.proxies = self.proxies
